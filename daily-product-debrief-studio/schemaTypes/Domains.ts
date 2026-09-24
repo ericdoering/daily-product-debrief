@@ -8,6 +8,7 @@
  * Keep the order and the indexes in sync with references/domains.md in the
  * sanity-tip skill — the rotation offset depends on the list being identical.
  */
+
 export const DOMAINS = [
     {title: '0 — GROQ basics', value: 'groq-basics'},
     {title: '1 — Datasets & perspectives', value: 'datasets-perspectives'},
