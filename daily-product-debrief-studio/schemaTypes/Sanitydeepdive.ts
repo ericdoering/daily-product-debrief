@@ -3,7 +3,7 @@ import {defineField, defineType} from 'sanity'
 import {BookIcon} from '@sanity/icons/Book'
  
 export const Sanitydeepdive = defineType({
-  name: 'Sanitydeepdive',
+  name: 'sanityDeepDive',
   title: 'Sanity Deep Dive',
   type: 'document',
   icon: BookIcon,
