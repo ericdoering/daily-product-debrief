@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 import {CalendarIcon} from '@sanity/icons/Calendar'
 
 export const Morningdebrief = defineType({
-  name: 'Morningdebrief',
+  name: 'morningDebrief',
   title: 'Morning Debrief',
   type: 'document',
   icon: CalendarIcon,
