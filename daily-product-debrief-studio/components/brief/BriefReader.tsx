@@ -22,22 +22,17 @@ export const BriefReader: UserViewComponent = (props) => {
       <Container width={1}>
         <Stack paddingBottom={5} gap={5}>
           <Stack gap={3}>
-            <Label muted size={0}>
-              {kind}
-            </Label>
-            <Heading as="h1" size={3}>
+           <Heading as="h1" size={3}>
               {title}
             </Heading>
-            {date ? (
-              <Text muted size={1}>
-                {formatDate(date)}
-              </Text>
-            ) : null}
             {digest.meta ? (
               <Text muted size={1}>
                 {digest.meta}
               </Text>
             ) : null}
+            <Label muted size={0}>
+              {kind}
+            </Label>
             {digest.lede ? <MarkdownView markdown={digest.lede} variant="deck" /> : null}
           </Stack>
 
@@ -99,15 +94,3 @@ function ItemCard({item}: {item: string}) {
   )
 }
 
-function formatDate(iso: string): string {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso)
-  if (!match) return iso
-  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])))
-  return new Intl.DateTimeFormat('en-US', {
-    day: 'numeric',
-    month: 'long',
-    timeZone: 'UTC',
-    weekday: 'long',
-    year: 'numeric',
-  }).format(date)
-}
